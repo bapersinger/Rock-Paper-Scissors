@@ -27,11 +27,13 @@
 
 		<script>
 		
-			var userchoice = prompt("Rock, Paper, or Scissors?");
+			var userchoice = prompt("Rock, Paper, Scissors, Spock, or Lizard?");
 			var options = [
 				"Rock",
 				"Paper",
-				"Scissors"
+				"Scissors",
+				"Spock",
+				"Lizard"
 			];
 
 			var randomNumber = Math.floor(Math.random()*options.length);
@@ -50,6 +52,14 @@
 				var userchoice = "Scissors"
 			}
 
+			else if (userchoice==="spock"){
+				var userchoice = "Spock"
+			}
+
+			else if (userchoice==="lizard"){
+				var userchoice = "Lizard"
+			}
+
 //Game Logic	
 			document.write("<h3>Computer chooses " + choicename + "!</h3>");
 			if(userchoice==="Rock"){
@@ -61,6 +71,13 @@
 				}
 				else if (choicename==="Scissors"){
 					document.write("<h2><img src='rock.jpg' alt='Rock'> crushes <img src='scissors.jpg' alt='Scissors'></h2><h1>You WIN!</h1>");
+				}
+				else if (choicename==="Spock"){
+					document.write("<h2><img src='rock.jpg' alt='Rock'> is vaporized by <img src='spock.jpg' alt='spock'></h2><h1>You LOSE!</h1>");
+				}
+
+				else if (choicename==="Lizard"){
+					document.write("<h2><img src='rock.jpg' alt='Rock'> crushes <img src='lizard.jpg' alt='Lizard'></h2><h1>You WIN!</h1>");
 				}
 			}
 
@@ -74,6 +91,13 @@
 				else if (choicename==="Scissors"){
 					document.write("<h2><img src='paper.jpg' alt='Paper'> is cut by <img src='scissors.jpg' alt='Scissors'></h2><h1>You LOSE!</h1>");
 				}
+				else if (choicename==="Spock"){
+					document.write("<h2><img src='paper.jpg' alt='Paper'> disproves <img src='spock.jpg' alt='Spock'></h2><h1>You WIN!</h1>");
+
+				}
+				else if (choicename==="Lizard"){
+					document.write("<h2><img src='paper.jpg' alt='Paper'> is eaten by <img src='lizard.jpg' alt='Lizard'></h2><h1>You LOSE!</h1>");
+				}	
 			}
 
 			else if(userchoice==="Scissors"){
@@ -85,6 +109,48 @@
 				}
 				else if (choicename==="Scissors"){
 					document.write("<h2><img src='scissors.jpg' alt='Scissors'> vs. <img src='scissors.jpg' alt='scissors'></h2><h1>TIE!</h1>");
+				}
+				else if (choicename==="Lizard"){
+					document.write("<h2><img src='scissors.jpg' alt='Scissors'> decapitate <img src='lizard.jpg' alt='Lizard'></h2><h1>You WIN!</h1>");
+				}
+				else if (choicename==="Spock"){
+					document.write("<h2><img src='scissors.jpg' alt='Scissors'> are smashed by <img src='spock.jpg' alt='Spock'></h2><h1>You LOSE!</h1>");
+				}
+			}
+
+			else if(userchoice==="Spock"){
+				if(choicename==="Rock"){
+					document.write("<h2><img src='spock.jpg' alt='spock'> vaporizes <img src='rock.jpg' alt='Rock'></h2><h1>You WIN!</h1>");
+				}
+				else if (choicename==="Paper"){
+					document.write("<h2><img src='spock.jpg' alt='spock'> is disproved by <img src='paper.jpg' alt='Paper'></h2><h1>You LOSE!</h1>");
+				}
+				else if (choicename==="Scissors"){
+					document.write("<h2><img src='spock.jpg' alt='Spock'> vaporizes <img src='scissors.jpg' alt='scissors'></h2><h1>You WIN!</h1>");
+				}
+				else if (choicename==="Lizard"){
+					document.write("<h2><img src='spock.jpg' alt='Spock'> is poisioned by <img src='lizard.jpg' alt='Lizard'></h2><h1>You LOSE!</h1>");
+				}
+				else if (choicename==="Spock"){
+					document.write("<h2><img src='spock.jpg' alt='Spock'> vs. <img src='spock.jpg' alt='Spcok'></h2><h1>TIE!</h1>");
+				}
+			}
+
+			else if(userchoice==="Lizard"){
+				if(choicename==="Rock"){
+					document.write("<h2><img src='lizard.jpg' alt='Lizard'> is crushed by <img src='rock.jpg' alt='Rock'></h2><h1>You LOSE!</h1>");
+				}
+				else if (choicename==="Paper"){
+					document.write("<h2><img src='lizard.jpg' alt='Lizard'> eats <img src='paper.jpg' alt='Paper'></h2><h1>You WIN!</h1>");
+				}
+				else if (choicename==="Scissors"){
+					document.write("<h2><img src='lizard.jpg' alt='Lizard'> is decapitated by <img src='scissors.jpg' alt='scissors'></h2><h1>You LOSE!</h1>");
+				}
+				else if (choicename==="Lizard"){
+					document.write("<h2><img src='lizard.jpg' alt='Lizard'> vs. <img src='lizard.jpg' alt='Lizard'></h2><h1>TIE!</h1>");
+				}
+				else if (choicename==="Spock"){
+					document.write("<h2><img src='lizard.jpg' alt='Lizard'> poisions <img src='spock.jpg' alt='Spock'></h2><h1>You WIN!</h1>");
 				}
 			}
 		
