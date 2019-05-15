@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Rock, Paper, Scissors">
+		<meta name="keywords" content="Rock Paper Scissors Game">
+
+		<title>Rock, Paper, Scissors</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<!--internal CSS -->
+		<style>
+			body {
+			background: #736B67; 
+			padding: 15px;
+			font-size: 30px;
+			text-align: center;
+			color: #D5A021;
+			}
+
+			img {
+				width: 25%;
+				display: inline;
+			}
+		</style>
+
+		<script>
+		
+			var userchoice = prompt("Rock, Paper, or Scissors?");
+			var options = [
+				"Rock",
+				"Paper",
+				"Scissors"
+			];
+
+			var randomNumber = Math.floor(Math.random()*options.length);
+			
+			var choicename = options[randomNumber];
+
+//Make userchoice not case specific
+			if (userchoice==="rock"){
+				var userchoice = "Rock"
+			}
+			else if (userchoice==="paper"){
+				var userchoice = "Paper"
+			}
+
+			else if (userchoice==="scissors"){
+				var userchoice = "Scissors"
+			}
+
+//Game Logic	
+			document.write("<h3>Computer chooses " + choicename + "!</h3>");
+			if(userchoice==="Rock"){
+				if(choicename==="Rock"){
+					document.write("<h2><img src='rock.jpg' alt='Rock'> vs. <img src='rock.jpg' alt='Rock'></h2><h1>TIE</h1>");
+				}
+				else if (choicename==="Paper"){
+					document.write("<h2><img src='rock.jpg' alt='Rock'> is covered by <img src='paper.jpg' alt='Paper'></h2><h1>You LOSE!</h1>");
+				}
+				else if (choicename==="Scissors"){
+					document.write("<h2><img src='rock.jpg' alt='Rock'> crushes <img src='scissors.jpg' alt='Scissors'></h2><h1>You WIN!</h1>");
+				}
+			}
+
+			else if(userchoice==="Paper"){
+				if(choicename==="Rock"){
+					document.write("<h2><img src='paper.jpg' alt='Paper'> covers <img src='rock.jpg' alt='Rock'></h2><h1>You WIN!</h1>");
+				}
+				else if (choicename==="Paper"){
+					document.write("<h2><img src='paper.jpg' alt='Paper'> vs. <img src='paper.jpg' alt='Paper'></h2><h1>TIE!</h1>");
+				}
+				else if (choicename==="Scissors"){
+					document.write("<h2><img src='paper.jpg' alt='Paper'> is cut by <img src='scissors.jpg' alt='Scissors'></h2><h1>You LOSE!</h1>");
+				}
+			}
+
+			else if(userchoice==="Scissors"){
+				if(choicename==="Rock"){
+					document.write("<h2><img src='scissors.jpg' alt='scissors'> are crushed by <img src='rock.jpg' alt='Rock'></h2><h1>You LOSE!</h1>");
+				}
+				else if (choicename==="Paper"){
+					document.write("<h2><img src='scissors.jpg' alt='Scissors'> cut <img src='paper.jpg' alt='Paper'></h2><h1>You WIN!</h1>");
+				}
+				else if (choicename==="Scissors"){
+					document.write("<h2><img src='scissors.jpg' alt='Scissors'> vs. <img src='scissors.jpg' alt='scissors'></h2><h1>TIE!</h1>");
+				}
+			}
+		
+		</script>
+	</head>
+	<body>
+		<!-- PAGE CONTENT WILL BE PRINTED HERE --> 
+	</body>
+</html>
